@@ -1,0 +1,137 @@
+[
+  {
+    "ID": "1",
+    "Acronym": "AC",
+    "Name": "Acre"
+  },
+  {
+    "ID": "2",
+    "Acronym": "AL",
+    "Name": "Alagoas"
+  },
+  {
+    "ID": "3",
+    "Acronym": "AM",
+    "Name": "Amazonas"
+  },
+  {
+    "ID": "4",
+    "Acronym": "AP",
+    "Name": "Amapá"
+  },
+  {
+    "ID": "5",
+    "Acronym": "BA",
+    "Name": "Bahia"
+  },
+  {
+    "ID": "6",
+    "Acronym": "CE",
+    "Name": "Ceará"
+  },
+  {
+    "ID": "7",
+    "Acronym": "DF",
+    "Name": "Distrito Federal"
+  },
+  {
+    "ID": "8",
+    "Acronym": "ES",
+    "Name": "Espírito Santo"
+  },
+  {
+    "ID": "9",
+    "Acronym": "GO",
+    "Name": "Goiás"
+  },
+  {
+    "ID": "10",
+    "Acronym": "MA",
+    "Name": "Maranhão"
+  },
+  {
+    "ID": "11",
+    "Acronym": "MG",
+    "Name": "Minas Gerais"
+  },
+  {
+    "ID": "12",
+    "Acronym": "MS",
+    "Name": "Mato Grosso do Sul"
+  },
+  {
+    "ID": "13",
+    "Acronym": "MT",
+    "Name": "Mato Grosso"
+  },
+  {
+    "ID": "14",
+    "Acronym": "PA",
+    "Name": "Pará"
+  },
+  {
+    "ID": "15",
+    "Acronym": "PB",
+    "Name": "Paraíba"
+  },
+  {
+    "ID": "16",
+    "Acronym": "PE",
+    "Name": "Pernambuco"
+  },
+  {
+    "ID": "17",
+    "Acronym": "PI",
+    "Name": "Piauí"
+  },
+  {
+    "ID": "18",
+    "Acronym": "PR",
+    "Name": "Paraná"
+  },
+  {
+    "ID": "19",
+    "Acronym": "RJ",
+    "Name": "Rio de Janeiro"
+  },
+  {
+    "ID": "20",
+    "Acronym": "RN",
+    "Name": "Rio Grande do Norte"
+  },
+  {
+    "ID": "21",
+    "Acronym": "RO",
+    "Name": "Rondônia"
+  },
+  {
+    "ID": "22",
+    "Acronym": "RR",
+    "Name": "Roraima"
+  },
+  {
+    "ID": "23",
+    "Acronym": "RS",
+    "Name": "Rio Grande do Sul"
+  },
+  {
+    "ID": "24",
+    "Acronym": "SC",
+    "Name": "Santa Catarina"
+  },
+  {
+    "ID": "25",
+    "Acronym": "SE",
+    "Name": "Sergipe"
+  },
+  {
+    "ID": "26",
+    "Acronym": "SP",
+    "Name": "São Paulo"
+  },
+  {
+    "ID": "27",
+    "Acronym": "TO",
+    "Name": "Tocantins"
+  }
+]
