@@ -18,31 +18,31 @@ const processData = async () => {
         JSON.stringify(citiesForState)
       );
     }
-    const result = await getCountCitiesOfState(states);
-    console.log('Number of cities each state');
-    console.log(result.sort((a, b) => a.numCities - b.numCities));
-    const biggerStates = await getBiggerStates(result, 5);
-    console.log('Bigger states');
-    console.log(biggerStates);
-    const shorterStates = await getShorterStates(result, 5);
-    console.log('Shorter states');
-    console.log(shorterStates);
-    const biggestCityEachState = await getBiggestCityNameEachState(states);
-    console.log('Biggest city names each state');
-    console.log(biggestCityEachState);
+    // const result = await getCountCitiesOfState(states);
+    // console.log('Number of cities each state');
+    // console.log(result.sort((a, b) => a.numCities - b.numCities));
+    // const biggerStates = await getBiggerStates(result, 5);
+    // console.log('Bigger states');
+    // console.log(biggerStates);
+    // const shorterStates = await getShorterStates(result, 5);
+    // console.log('Shorter states');
+    // console.log(shorterStates);
+    // const biggestCityEachState = await getBiggestCityNameEachState(states);
+    // console.log('Biggest city names each state');
+    // console.log(biggestCityEachState);
     const shortestCityEachState = await getShortestCityNameEachState(states);
     console.log('Shortest city names each state');
     console.log(shortestCityEachState);
-    const biggestCityAllStates = await getBiggestCityAllStates(
-      biggestCityEachState
-    );
-    console.log('Biggest city name all states');
-    console.log(biggestCityAllStates);
-    const shortestCityAllStates = await getShortestCityAllStates(
-      shortestCityEachState
-    );
-    console.log('Shortes city name all states');
-    console.log(shortestCityAllStates);
+    // const biggestCityAllStates = await getBiggestCityAllStates(
+    //   biggestCityEachState
+    // );
+    // console.log('Biggest city name all states');
+    // console.log(biggestCityAllStates);
+    // const shortestCityAllStates = await getShortestCityAllStates(
+    //   shortestCityEachState
+    // );
+    // console.log('Shortes city name all states');
+    // console.log(shortestCityAllStates);
   } catch (err) {
     console.log(err);
   }
@@ -70,7 +70,8 @@ const getCountCitiesOfState = async (states) => {
   try {
     const result = [];
     for (let i = 0; i < states.length; i++) {
-      result.push(await readCountCitiesFromJson(states[i].Acronym));
+      const countCities = await readCountCitiesFromJson(states[i].Acronym);
+      result.push(countCities);
     }
     return result;
   } catch (err) {
@@ -101,7 +102,8 @@ const getShorterStates = async (countStateCities, amount) => {
 const getBiggestCityNameEachState = async (states) => {
   const result = [];
   for (let i = 0; i < states.length; i++) {
-    result.push(await readBiggestCityNameFromJson(states[i].Acronym));
+    const biggestCity = await readBiggestCityNameFromJson(states[i].Acronym);
+    result.push(biggestCity);
   }
   return result;
 };
@@ -121,7 +123,8 @@ const readBiggestCityNameFromJson = async (state) => {
 const getShortestCityNameEachState = async (states) => {
   const result = [];
   for (let i = 0; i < states.length; i++) {
-    result.push(await readShortestCityNameFromJson(states[i].Acronym));
+    const shortestCity = await readShortestCityNameFromJson(states[i].Acronym);
+    result.push(shortestCity);
   }
   return result;
 };
