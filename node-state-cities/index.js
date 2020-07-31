@@ -10,7 +10,7 @@ const processData = async () => {
         .map((stateCity) => {
           const { Name } = stateCity;
           return {
-            Name,
+            name: Name,
           };
         });
       await fs.writeFile(
@@ -95,8 +95,8 @@ const getBiggerStates = async (countStateCities, amount) => {
 };
 const getShorterStates = async (countStateCities, amount) => {
   return countStateCities
-    .sort((a, b) => a.numCities - b.numCities)
-    .slice(0, amount);
+    .sort((a, b) => b.numCities - a.numCities)
+    .slice(countStateCities.length - amount, countStateCities.length);
 };
 
 const getBiggestCityNameEachState = async (states) => {
@@ -112,9 +112,9 @@ const readBiggestCityNameFromJson = async (state) => {
   try {
     const citiesOfState = JSON.parse(await fs.readFile(`./json/${state}.json`));
     const biggestCityName = citiesOfState
-      .sort((a, b) => b.Name.localeCompare(a))
-      .sort((a, b) => b.Name.length - a.Name.length)[0];
-    return { Name: biggestCityName.Name, state };
+      .sort((a, b) => b.name.localeCompare(a))
+      .sort((a, b) => b.name.length - a.name.length)[0];
+    return { name: biggestCityName.name, state };
   } catch (err) {
     console.log(err);
   }
@@ -133,9 +133,9 @@ const readShortestCityNameFromJson = async (state) => {
   try {
     const citiesOfState = JSON.parse(await fs.readFile(`./json/${state}.json`));
     const shortestCityName = citiesOfState
-      .sort((a, b) => a.Name.localeCompare(b))
-      .sort((a, b) => a.Name.length - b.Name.length)[0];
-    return { Name: shortestCityName.Name, state };
+      .sort((a, b) => a.name.localeCompare(b))
+      .sort((a, b) => a.name.length - b.name.length)[0];
+    return { name: shortestCityName.name, state };
   } catch (err) {
     console.log(err);
   }
@@ -144,8 +144,8 @@ const readShortestCityNameFromJson = async (state) => {
 const getBiggestCityAllStates = async (biggestCityEachState) => {
   try {
     const biggestCityName = biggestCityEachState
-      .sort((a, b) => a.Name.localeCompare(b.Name))
-      .sort((a, b) => b.Name.length - a.Name.length)[0];
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .sort((a, b) => b.name.length - a.name.length)[0];
     return biggestCityName;
   } catch (err) {
     console.log(err);
@@ -155,8 +155,8 @@ const getBiggestCityAllStates = async (biggestCityEachState) => {
 const getShortestCityAllStates = async (shortestCityEachState) => {
   try {
     const shortestCityName = shortestCityEachState
-      .sort((a, b) => a.Name.localeCompare(b.Name))
-      .sort((a, b) => a.Name.length - b.Name.length)[0];
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .sort((a, b) => a.name.length - b.name.length)[0];
     return shortestCityName;
   } catch (err) {
     console.log(err);
